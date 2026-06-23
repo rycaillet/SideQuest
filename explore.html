@@ -13,7 +13,7 @@
       <h1>SideQuest</h1>
       <p class="hero-text">
         Stop scrolling. Find something fun to do today based on your budget,
-        setting, group, and energy level.
+        setting, group, energy level, and search keywords.
       </p>
     </section>
 
@@ -23,7 +23,7 @@
           <h2>Build Your Quest</h2>
           <p>
             Choose your preferences and SideQuest will recommend real places around
-            Fairfax and Northern Virginia. Select “Any” to keep a category open.
+            Fairfax and Northern Virginia.
           </p>
         </div>
 
@@ -60,9 +60,15 @@
           </select>
         </label>
 
+        <label class="search-label">
+          Search Keyword
+          <input type="text" id="keyword" placeholder="Example: coffee, hiking, museum" />
+        </label>
+
         <div class="button-row">
           <button type="submit" class="primary-btn">Find Quests</button>
           <button type="button" id="reset-btn" class="secondary-btn">Reset</button>
+          <a href="favorites.html" class="secondary-btn back-link">Favorites</a>
           <a href="index.html" class="secondary-btn back-link">Back Home</a>
         </div>
 
@@ -79,6 +85,9 @@
         <button type="button" id="random-btn" class="secondary-btn">Pick One For Me</button>
       </div>
 
+      <p id="results-summary" class="results-summary"></p>
+
+      <div id="stats-grid" class="stats-grid"></div>
       <div id="random-pick" class="random-pick hidden"></div>
       <div id="results-grid" class="results-grid"></div>
     </section>

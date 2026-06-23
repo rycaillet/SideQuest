@@ -898,8 +898,12 @@ const resultsTitle = document.getElementById("results-title");
 const randomBtn = document.getElementById("random-btn");
 const randomPick = document.getElementById("random-pick");
 const resetBtn = document.getElementById("reset-btn");
+const keywordInput = document.getElementById("keyword");
+const resultsSummary = document.getElementById("results-summary");
+const statsGrid = document.getElementById("stats-grid");
 
 let currentMatches = [];
+let favorites = JSON.parse(localStorage.getItem("sideQuestFavorites")) || [];
 
 function isValidBudget(budget) {
   return typeof budget === "number" && !Number.isNaN(budget) && budget >= 0;
@@ -910,7 +914,8 @@ function getPreferences() {
     budget: Number(budgetInput.value),
     setting: settingInput.value,
     groupType: groupInput.value,
-    energyLevel: energyInput.value
+    energyLevel: energyInput.value,
+    keyword: keywordInput.value.trim().toLowerCase()
   };
 }
 
@@ -929,6 +934,19 @@ function getRecommendations(activityList, preferences) {
     .filter(activity => preferences.setting === "any" || activity.setting === preferences.setting)
     .filter(activity => preferences.groupType === "any" || activity.groupType === preferences.groupType)
     .filter(activity => preferences.energyLevel === "any" || activity.energyLevel === preferences.energyLevel)
+    .filter(activity => {
+      if (preferences.keyword === "") return true;
+
+      const searchableText = `
+        ${activity.name}
+        ${activity.place}
+        ${activity.city}
+        ${activity.description}
+        ${activity.goodFor}
+      `.toLowerCase();
+
+      return searchableText.includes(preferences.keyword);
+    })
     .sort((a, b) => a.cost - b.cost);
 }
 
@@ -940,6 +958,59 @@ function getRandomActivity(activityList) {
 
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+function saveFavorites() {
+  localStorage.setItem("sideQuestFavorites", JSON.stringify(favorites));
+}
+
+function isFavorite(activityName) {
+  return favorites.some(activity => activity.name === activityName);
+}
+
+function toggleFavorite(activity) {
+  if (isFavorite(activity.name)) {
+    favorites = favorites.filter(saved => saved.name !== activity.name);
+  } else {
+    favorites.push(activity);
+  }
+
+  saveFavorites();
+  renderResults(currentMatches);
+}
+
+function renderStats(matches) {
+  if (!statsGrid) return;
+
+  if (matches.length === 0) {
+    statsGrid.innerHTML = "";
+    return;
+  }
+
+  const indoorCount = matches.filter(activity => activity.setting === "indoor").length;
+  const outdoorCount = matches.filter(activity => activity.setting === "outdoor").length;
+  const averageCost = Math.round(
+    matches.reduce((sum, activity) => sum + activity.cost, 0) / matches.length
+  );
+
+  statsGrid.innerHTML = `
+    <div class="stat-card">
+      <strong>${matches.length}</strong>
+      <span>Total Matches</span>
+    </div>
+    <div class="stat-card">
+      <strong>${indoorCount}</strong>
+      <span>Indoor</span>
+    </div>
+    <div class="stat-card">
+      <strong>${outdoorCount}</strong>
+      <span>Outdoor</span>
+    </div>
+    <div class="stat-card">
+      <strong>$${averageCost}</strong>
+      <span>Average Cost</span>
+    </div>
+  `;
 }
 
 function createActivityCard(activity) {
@@ -961,11 +1032,24 @@ function createActivityCard(activity) {
         <span class="tag energy">${capitalize(activity.energyLevel)} Energy</span>
       </div>
 
-      <button type="button" class="details-btn">View Details</button>
+      <div class="card-actions">
+        <button type="button" class="favorite-btn">
+          ${isFavorite(activity.name) ? "♥ Saved" : "♡ Save"}
+        </button>
+        <button type="button" class="details-btn">View Details</button>
+      </div>
     </div>
   `;
 
+  const favoriteBtn = card.querySelector(".favorite-btn");
+
+  favoriteBtn.addEventListener("click", event => {
+    event.stopPropagation();
+    toggleFavorite(activity);
+  });
+
   card.addEventListener("click", () => openModal(activity));
+
   card.addEventListener("keydown", event => {
     if (event.key === "Enter") openModal(activity);
   });
@@ -977,6 +1061,13 @@ function renderResults(matches) {
   resultsGrid.innerHTML = "";
   randomPick.classList.add("hidden");
   resultsSection.classList.remove("hidden");
+
+  const preferences = getPreferences();
+
+  resultsSummary.textContent =
+    `Showing ${matches.length} activit${matches.length === 1 ? "y" : "ies"} under $${preferences.budget}. Saved favorites: ${favorites.length}.`;
+
+  renderStats(matches);
 
   if (matches.length === 0) {
     resultsTitle.textContent = "No Matching Quests";
@@ -1123,10 +1214,16 @@ resetBtn.addEventListener("click", () => {
   form.reset();
   message.textContent = "";
   currentMatches = [];
+
   resultsGrid.innerHTML = "";
+  resultsSummary.textContent = "";
+  statsGrid.innerHTML = "";
+
   randomPick.innerHTML = "";
   randomPick.classList.add("hidden");
+
   resultsSection.classList.add("hidden");
+
   budgetInput.focus();
 });
 
