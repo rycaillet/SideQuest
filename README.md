@@ -13,10 +13,6 @@ SideQuest is a web-based activity recommendation application that helps users fi
 - [Screenshots](#-screenshots)
 - [Technology Stack](#-technology-stack)
 - [Project Structure](#-project-structure)
-- [How to Run](#-how-to-run)
-- [User Workflow](#-user-workflow)
-- [Future Improvements](#-future-improvements)
-- [Team Members](#-team-members)
 
 ---
 
@@ -108,18 +104,28 @@ Activities include places throughout:
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```text
 SideQuest/
 │
-├── index.html
-├── explore.html
-├── favorites.html
+├── images/
+│   ├── LandingPage.jpg
+│   ├── Recommendations.jpg
+│   └── FavoritesPage.jpg
 │
-├── script.js
-├── favorites.js
+├── index.html          # Landing page
+├── explore.html        # Recommendation engine
+├── favorites.html      # Saved activities page
 │
-├── style.css
+├── script.js           # Main application logic
+├── favorites.js        # Favorites functionality
+├── style.css           # Styling
+│
+├── recommendation.js
+├── recommendation.unit.test.js
+├── integration.test.js
+├── system.test.js
 │
 └── README.md
+```
