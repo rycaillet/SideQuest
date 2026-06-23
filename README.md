@@ -85,15 +85,15 @@ Activities include places throughout:
 
 ### Landing Page
 
-![Landing Page](images/landing-page.png)
+![Landing Page](images/LandingPage.jpg)
 
 ### Activity Recommendations
 
-![Recommendations](images/recommendations.png)
+![Recommendations](images/Recommendations.jpg)
 
 ### Favorites Page
 
-![Favorites](images/favorites.png)
+![Favorites](images/FavoritesPage.jpg)
 
 ---
 
