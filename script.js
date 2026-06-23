@@ -298,7 +298,592 @@ const activities = [
     description: "A premium spa experience for relaxing, resetting, and taking a slower day.",
     goodFor: "Relaxation, self-care, quiet solo time",
     matchReason: "This is indoor, solo-friendly, and low energy."
-  }
+  },
+  {
+  name: "Lake Fairfax Park",
+  place: "Lake Fairfax Park",
+  city: "Reston, VA",
+  cost: 10,
+  costLabel: "$0-$20",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "medium",
+  distance: "~25 minutes from Fairfax",
+  image: "🚣",
+  description: "A large park with trails, picnic space, seasonal water activities, and room for a relaxed group outing.",
+  goodFor: "Picnics, walking, casual outdoor plans",
+  matchReason: "This is outdoor, group-friendly, affordable, and medium energy."
+},
+{
+  name: "Frying Pan Farm Park",
+  place: "Frying Pan Farm Park",
+  city: "Herndon, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "~25 minutes from Fairfax",
+  image: "🐄",
+  description: "A working farm-style park with animals, walking areas, and relaxed outdoor space.",
+  goodFor: "Casual group visits, animals, easy walking",
+  matchReason: "This is free, outdoor, group-friendly, and low energy."
+},
+{
+  name: "Huntley Meadows Park",
+  place: "Huntley Meadows Park",
+  city: "Alexandria, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "alone",
+  energyLevel: "low",
+  distance: "~35 minutes from Fairfax",
+  image: "🦆",
+  description: "A peaceful wetland park with boardwalk trails, wildlife viewing, and quiet scenery.",
+  goodFor: "Birdwatching, peaceful walks, solo nature time",
+  matchReason: "This is free, outdoor, solo-friendly, and low energy."
+},
+{
+  name: "Ellanor C. Lawrence Park",
+  place: "Ellanor C. Lawrence Park",
+  city: "Chantilly, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "alone",
+  energyLevel: "medium",
+  distance: "~15 minutes from Fairfax",
+  image: "🌳",
+  description: "A wooded park with trails, nature programs, and historic areas close to Fairfax.",
+  goodFor: "Trail walking, nature, solo exploring",
+  matchReason: "This is free, outdoor, solo-friendly, and medium energy."
+},
+{
+  name: "Riverbend Park",
+  place: "Riverbend Park",
+  city: "Great Falls, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "alone",
+  energyLevel: "medium",
+  distance: "~35 minutes from Fairfax",
+  image: "🏞️",
+  description: "A scenic Potomac River park with trails, river views, and a quieter alternative to Great Falls Park.",
+  goodFor: "Nature walks, river views, solo outdoor time",
+  matchReason: "This is outdoor, free, solo-friendly, and medium energy."
+},
+{
+  name: "Mason Neck State Park",
+  place: "Mason Neck State Park",
+  city: "Lorton, VA",
+  cost: 10,
+  costLabel: "$10 parking",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "medium",
+  distance: "~35 minutes from Fairfax",
+  image: "🦅",
+  description: "A state park with trails, water views, wildlife, and peaceful areas near the Potomac.",
+  goodFor: "Nature, walking, group outdoor plans",
+  matchReason: "This is outdoor, group-friendly, and medium energy."
+},
+{
+  name: "Occoquan Regional Park",
+  place: "Occoquan Regional Park",
+  city: "Lorton, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "medium",
+  distance: "~30 minutes from Fairfax",
+  image: "🌊",
+  description: "A riverside park with trails, open space, water views, and areas for casual group activities.",
+  goodFor: "Walking, river views, group hangouts",
+  matchReason: "This is free, outdoor, friend-friendly, and medium energy."
+},
+{
+  name: "Bull Run Regional Park",
+  place: "Bull Run Regional Park",
+  city: "Centreville, VA",
+  cost: 10,
+  costLabel: "$0-$20",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "medium",
+  distance: "~20 minutes from Fairfax",
+  image: "🏕️",
+  description: "A large regional park with trails, picnic areas, camping, and seasonal events.",
+  goodFor: "Group outdoor plans, picnics, seasonal events",
+  matchReason: "This is outdoor, group-friendly, and medium energy."
+},
+{
+  name: "Fountainhead Regional Park",
+  place: "Fountainhead Regional Park",
+  city: "Fairfax Station, VA",
+  cost: 10,
+  costLabel: "$0-$20",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "high",
+  distance: "~25 minutes from Fairfax",
+  image: "🚵",
+  description: "A popular park for hiking, mountain biking, and more active outdoor plans.",
+  goodFor: "Hiking, biking, active friend groups",
+  matchReason: "This is outdoor, group-friendly, and high energy."
+},
+{
+  name: "Manassas National Battlefield",
+  place: "Manassas National Battlefield Park",
+  city: "Manassas, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "alone",
+  energyLevel: "medium",
+  distance: "~30 minutes from Fairfax",
+  image: "🏛️",
+  description: "A historic battlefield park with walking trails, open fields, and Civil War history.",
+  goodFor: "History, walking, solo exploring",
+  matchReason: "This is free, outdoor, solo-friendly, and medium energy."
+},
+{
+  name: "National Museum of the U.S. Army",
+  place: "National Museum of the U.S. Army",
+  city: "Fort Belvoir, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "indoor",
+  groupType: "alone",
+  energyLevel: "low",
+  distance: "~30 minutes from Fairfax",
+  image: "🎖️",
+  description: "A modern museum focused on U.S. Army history, exhibits, and military stories.",
+  goodFor: "History, museums, solo indoor plans",
+  matchReason: "This is free, indoor, solo-friendly, and low energy."
+},
+{
+  name: "Fairfax Museum",
+  place: "Fairfax Museum and Visitor Center",
+  city: "Fairfax, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "indoor",
+  groupType: "alone",
+  energyLevel: "low",
+  distance: "In Fairfax",
+  image: "🏫",
+  description: "A small local museum focused on Fairfax history and local exhibits.",
+  goodFor: "Local history, short visits, solo exploring",
+  matchReason: "This is free, indoor, solo-friendly, and low energy."
+},
+{
+  name: "Fair Oaks Mall",
+  place: "Fair Oaks Mall",
+  city: "Fairfax, VA",
+  cost: 20,
+  costLabel: "$0-$50",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "medium",
+  distance: "In Fairfax",
+  image: "🛍️",
+  description: "A large indoor mall with shopping, food, and casual places to walk around with friends.",
+  goodFor: "Shopping, food court, casual group plans",
+  matchReason: "This is indoor, friend-friendly, and medium energy."
+},
+{
+  name: "Mosaic District",
+  place: "Mosaic District",
+  city: "Merrifield, VA",
+  cost: 25,
+  costLabel: "$0-$50",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "~15 minutes from Fairfax",
+  image: "🍽️",
+  description: "A walkable shopping and dining district with restaurants, outdoor seating, movies, and shops.",
+  goodFor: "Dinner, walking around, relaxed group plans",
+  matchReason: "This is outdoor, group-friendly, and low energy."
+},
+{
+  name: "Reston Town Center",
+  place: "Reston Town Center",
+  city: "Reston, VA",
+  cost: 25,
+  costLabel: "$0-$50",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "~25 minutes from Fairfax",
+  image: "🌆",
+  description: "A walkable town center with restaurants, shops, events, and casual nightlife.",
+  goodFor: "Food, walking, relaxed evenings",
+  matchReason: "This is outdoor, friend-friendly, and low energy."
+},
+{
+  name: "Fairfax Corner",
+  place: "Fairfax Corner",
+  city: "Fairfax, VA",
+  cost: 20,
+  costLabel: "$0-$50",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "In Fairfax",
+  image: "🍕",
+  description: "A local outdoor shopping and dining area with restaurants, movies, and casual hangout spots.",
+  goodFor: "Dinner, movies, easy local group plans",
+  matchReason: "This is outdoor, group-friendly, and low energy."
+},
+{
+  name: "One Loudoun",
+  place: "One Loudoun",
+  city: "Ashburn, VA",
+  cost: 30,
+  costLabel: "$0-$60",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "~35 minutes from Fairfax",
+  image: "🌃",
+  description: "A popular dining and entertainment area with restaurants, shops, and evening hangout options.",
+  goodFor: "Restaurants, nightlife, casual friend plans",
+  matchReason: "This is outdoor, group-friendly, and low energy."
+},
+{
+  name: "Angelika Film Center",
+  place: "Angelika Film Center",
+  city: "Merrifield, VA",
+  cost: 18,
+  costLabel: "$15-$25",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "~15 minutes from Fairfax",
+  image: "🎥",
+  description: "A stylish movie theater in Mosaic District with mainstream and indie films.",
+  goodFor: "Movies, date nights, low-energy friend plans",
+  matchReason: "This is indoor, friend-friendly, and low energy."
+},
+{
+  name: "The State Theatre",
+  place: "The State Theatre",
+  city: "Falls Church, VA",
+  cost: 35,
+  costLabel: "$25-$50",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "medium",
+  distance: "~25 minutes from Fairfax",
+  image: "🎤",
+  description: "A live music and event venue with concerts, tribute bands, and performances.",
+  goodFor: "Live music, groups, evening plans",
+  matchReason: "This is indoor, friend-friendly, and medium energy."
+},
+{
+  name: "EagleBank Arena",
+  place: "EagleBank Arena",
+  city: "Fairfax, VA",
+  cost: 50,
+  costLabel: "$30+",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "medium",
+  distance: "In Fairfax",
+  image: "🏟️",
+  description: "A large event venue on GMU's campus with concerts, sports, comedy, and special events.",
+  goodFor: "Concerts, sports, comedy, big events",
+  matchReason: "This is indoor, group-friendly, and medium energy."
+},
+{
+  name: "Caboose Commons",
+  place: "Caboose Commons",
+  city: "Merrifield, VA",
+  cost: 20,
+  costLabel: "$10-$30",
+  setting: "indoor",
+  groupType: "alone",
+  energyLevel: "low",
+  distance: "~15 minutes from Fairfax",
+  image: "☕",
+  description: "A relaxed cafe and brewery-style spot that works for coffee, food, or casual solo time.",
+  goodFor: "Coffee, reading, casual food, solo downtime",
+  matchReason: "This is indoor, solo-friendly, and low energy."
+},
+{
+  name: "Cafe Amouri",
+  place: "Cafe Amouri",
+  city: "Vienna, VA",
+  cost: 15,
+  costLabel: "$10-$20",
+  setting: "indoor",
+  groupType: "alone",
+  energyLevel: "low",
+  distance: "~20 minutes from Fairfax",
+  image: "☕",
+  description: "A cozy independent coffee shop in Vienna that is good for reading, working, or a quiet break.",
+  goodFor: "Coffee, studying, reading, low-energy solo time",
+  matchReason: "This is indoor, affordable, solo-friendly, and low energy."
+},
+{
+  name: "Rare Bird Coffee",
+  place: "Rare Bird Coffee Roasters",
+  city: "Falls Church, VA",
+  cost: 15,
+  costLabel: "$10-$20",
+  setting: "indoor",
+  groupType: "alone",
+  energyLevel: "low",
+  distance: "~25 minutes from Fairfax",
+  image: "☕",
+  description: "A local coffee roaster and cafe with a calm atmosphere for solo time or light work.",
+  goodFor: "Coffee, reading, solo reset",
+  matchReason: "This is indoor, affordable, solo-friendly, and low energy."
+},
+{
+  name: "Northside Social",
+  place: "Northside Social",
+  city: "Falls Church, VA",
+  cost: 20,
+  costLabel: "$10-$30",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "~25 minutes from Fairfax",
+  image: "🥐",
+  description: "A cafe and wine bar style spot that works well for relaxed conversation or casual food.",
+  goodFor: "Coffee, brunch, low-key friend meetups",
+  matchReason: "This is indoor, group-friendly, and low energy."
+},
+{
+  name: "Misha's Coffee",
+  place: "Misha's Coffee",
+  city: "Alexandria, VA",
+  cost: 15,
+  costLabel: "$10-$20",
+  setting: "indoor",
+  groupType: "alone",
+  energyLevel: "low",
+  distance: "~35 minutes from Fairfax",
+  image: "☕",
+  description: "A cozy coffee shop option for solo reading, light work, or a quiet change of scenery.",
+  goodFor: "Coffee, solo time, reading",
+  matchReason: "This is indoor, solo-friendly, affordable, and low energy."
+},
+{
+  name: "Sportrock Climbing",
+  place: "Sportrock Climbing Centers",
+  city: "Alexandria, VA",
+  cost: 30,
+  costLabel: "$25-$40",
+  setting: "indoor",
+  groupType: "alone",
+  energyLevel: "high",
+  distance: "~30 minutes from Fairfax",
+  image: "🧗",
+  description: "An indoor climbing gym with bouldering and climbing routes for an active solo challenge.",
+  goodFor: "Fitness, climbing, active solo plans",
+  matchReason: "This is indoor, solo-friendly, and high energy."
+},
+{
+  name: "The St. James",
+  place: "The St. James",
+  city: "Springfield, VA",
+  cost: 40,
+  costLabel: "$30+",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "high",
+  distance: "~25 minutes from Fairfax",
+  image: "🏋️",
+  description: "A large indoor sports and fitness complex with multiple athletic options.",
+  goodFor: "Sports, fitness, active group plans",
+  matchReason: "This is indoor, group-friendly, and high energy."
+},
+{
+  name: "Autobahn Indoor Speedway",
+  place: "Autobahn Indoor Speedway",
+  city: "Manassas, VA",
+  cost: 30,
+  costLabel: "$25-$40",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "high",
+  distance: "~30 minutes from Fairfax",
+  image: "🏎️",
+  description: "Indoor electric go-kart racing for a fast-paced group activity.",
+  goodFor: "Groups, competition, high-energy plans",
+  matchReason: "This is indoor, group-friendly, and high energy."
+},
+{
+  name: "Fun Land Fairfax",
+  place: "Fun Land Fairfax",
+  city: "Fairfax, VA",
+  cost: 35,
+  costLabel: "$20-$50",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "high",
+  distance: "In Fairfax",
+  image: "🎯",
+  description: "An entertainment center with arcade games and active attractions for groups.",
+  goodFor: "Arcade games, friends, high-energy fun",
+  matchReason: "This is indoor, group-friendly, and high energy."
+},
+{
+  name: "Cox Farms",
+  place: "Cox Farms",
+  city: "Centreville, VA",
+  cost: 25,
+  costLabel: "$20-$35",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "medium",
+  distance: "~20 minutes from Fairfax",
+  image: "🎃",
+  description: "A seasonal farm destination known for fall events, slides, food, and outdoor activities.",
+  goodFor: "Seasonal events, groups, outdoor fun",
+  matchReason: "This is outdoor, group-friendly, and medium energy."
+},
+{
+  name: "Roer's Zoofari",
+  place: "Roer's Zoofari",
+  city: "Vienna, VA",
+  cost: 25,
+  costLabel: "$20-$35",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "medium",
+  distance: "~25 minutes from Fairfax",
+  image: "🦒",
+  description: "A local animal park with wildlife encounters and outdoor walking areas.",
+  goodFor: "Animals, group outings, casual outdoor activity",
+  matchReason: "This is outdoor, group-friendly, and medium energy."
+},
+{
+  name: "Clemyjontri Park",
+  place: "Clemyjontri Park",
+  city: "McLean, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "~30 minutes from Fairfax",
+  image: "🎠",
+  description: "A colorful accessible park that works well for relaxed outdoor visits and casual group time.",
+  goodFor: "Easy outdoor plans, families, casual groups",
+  matchReason: "This is free, outdoor, group-friendly, and low energy."
+},
+{
+  name: "Mount Vernon Trail",
+  place: "Mount Vernon Trail",
+  city: "Alexandria, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "alone",
+  energyLevel: "high",
+  distance: "~35 minutes from Fairfax",
+  image: "🚴",
+  description: "A scenic paved trail along the Potomac River, good for biking, running, or long walks.",
+  goodFor: "Biking, running, active solo time",
+  matchReason: "This is free, outdoor, solo-friendly, and high energy."
+},
+{
+  name: "W&OD Trail",
+  place: "Washington & Old Dominion Trail",
+  city: "Northern Virginia",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "alone",
+  energyLevel: "high",
+  distance: "~20 minutes from Fairfax",
+  image: "🚲",
+  description: "A long paved rail trail through Northern Virginia that is great for biking, running, or walking.",
+  goodFor: "Cycling, running, long walks",
+  matchReason: "This is free, outdoor, solo-friendly, and high energy."
+},
+{
+  name: "Tysons Biergarten",
+  place: "Tysons Biergarten",
+  city: "Tysons, VA",
+  cost: 30,
+  costLabel: "$20-$50",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "~25 minutes from Fairfax",
+  image: "🍻",
+  description: "A casual social spot in Tysons for food, drinks, and relaxed group conversation.",
+  goodFor: "Friends, casual nights, food and drinks",
+  matchReason: "This is indoor, group-friendly, and low energy."
+},
+{
+  name: "Bunnyman Brewing",
+  place: "Bunnyman Brewing",
+  city: "Fairfax, VA",
+  cost: 25,
+  costLabel: "$15-$40",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "In Fairfax",
+  image: "🍺",
+  description: "A local brewery option for relaxed conversation and low-key group plans.",
+  goodFor: "Friends, casual drinks, relaxed evenings",
+  matchReason: "This is indoor, group-friendly, and low energy."
+},
+{
+  name: "Ornery Beer Company",
+  place: "Ornery Beer Company",
+  city: "Fairfax, VA",
+  cost: 25,
+  costLabel: "$15-$40",
+  setting: "indoor",
+  groupType: "friends",
+  energyLevel: "low",
+  distance: "In Fairfax",
+  image: "🍺",
+  description: "A local brewery and restaurant-style spot for casual food, drinks, and hanging out.",
+  goodFor: "Friends, food, relaxed nights",
+  matchReason: "This is indoor, friend-friendly, and low energy."
+},
+{
+  name: "GMU Campus Walk",
+  place: "George Mason University",
+  city: "Fairfax, VA",
+  cost: 0,
+  costLabel: "Free",
+  setting: "outdoor",
+  groupType: "alone",
+  energyLevel: "low",
+  distance: "In Fairfax",
+  image: "🎓",
+  description: "A simple walk around GMU's campus, green spaces, and nearby areas for a quick reset.",
+  goodFor: "Walking, solo breaks, low-pressure outdoor time",
+  matchReason: "This is free, outdoor, solo-friendly, and low energy."
+},
+{
+  name: "George Mason Rec Center",
+  place: "GMU Recreation",
+  city: "Fairfax, VA",
+  cost: 0,
+  costLabel: "Free/Student access",
+  setting: "indoor",
+  groupType: "alone",
+  energyLevel: "high",
+  distance: "In Fairfax",
+  image: "🏋️",
+  description: "A convenient indoor fitness option for a high-energy solo workout.",
+  goodFor: "Workouts, fitness, solo active plans",
+  matchReason: "This is indoor, solo-friendly, and high energy."
+}
 ];
 
 const form = document.getElementById("quest-form");
@@ -341,9 +926,9 @@ function validatePreferences(preferences) {
 function getRecommendations(activityList, preferences) {
   return activityList
     .filter(activity => activity.cost <= preferences.budget)
-    .filter(activity => activity.setting === preferences.setting)
-    .filter(activity => activity.groupType === preferences.groupType)
-    .filter(activity => activity.energyLevel === preferences.energyLevel)
+    .filter(activity => preferences.setting === "any" || activity.setting === preferences.setting)
+    .filter(activity => preferences.groupType === "any" || activity.groupType === preferences.groupType)
+    .filter(activity => preferences.energyLevel === "any" || activity.energyLevel === preferences.energyLevel)
     .sort((a, b) => a.cost - b.cost);
 }
 
@@ -420,21 +1005,33 @@ function renderResults(matches) {
 
 function renderRandomPick() {
   const pick = getRandomActivity(currentMatches);
+
   if (!pick) return;
 
-  randomPick.classList.remove("hidden");
-  randomPick.innerHTML = `
-    <p class="eyebrow">Random Pick</p>
-    <h3>${pick.image} ${pick.name}</h3>
-    <p>${pick.description}</p>
-    <div class="tag-row">
-      <span class="tag ${pick.cost === 0 ? "free" : "cost"}">${pick.costLabel}</span>
-      <span class="tag">${pick.city}</span>
-      <span class="tag">${pick.distance}</span>
-    </div>
-  `;
+  openModal(pick);
+}
 
-  randomPick.addEventListener("click", () => openModal(pick), { once: true });
+function getRecommendationReason(activity) {
+  const preferences = getPreferences();
+  const reasons = [];
+
+  if (activity.cost <= preferences.budget) {
+    reasons.push(`it fits within your $${preferences.budget} budget`);
+  }
+
+  if (preferences.setting !== "any") {
+    reasons.push(`it matches your ${preferences.setting} setting choice`);
+  }
+
+  if (preferences.groupType !== "any") {
+    reasons.push(`it works for ${preferences.groupType === "alone" ? "a solo plan" : "a group plan"}`);
+  }
+
+  if (preferences.energyLevel !== "any") {
+    reasons.push(`it matches your ${preferences.energyLevel} energy level`);
+  }
+
+  return `SideQuest recommended this because ${reasons.join(", ")}.`;
 }
 
 function openModal(activity) {
@@ -474,8 +1071,8 @@ function openModal(activity) {
       </div>
 
       <div class="modal-section match-box">
-        <h3>Why this matches</h3>
-        <p>${activity.matchReason}</p>
+        <h3>Why it was recommended</h3>
+        <p>${getRecommendationReason(activity)}</p>
       </div>
     </div>
   `;
@@ -531,4 +1128,19 @@ resetBtn.addEventListener("click", () => {
   randomPick.classList.add("hidden");
   resultsSection.classList.add("hidden");
   budgetInput.focus();
+});
+
+const revealElements = document.querySelectorAll(".hero, .panel, .results-section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.15 });
+
+revealElements.forEach(element => {
+  element.classList.add("reveal");
+  observer.observe(element);
 });
