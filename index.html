@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SideQuest</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">Activity Recommendation App</p>
+      <h1>SideQuest</h1>
+      <p class="hero-text">Stop scrolling. Find something fun to do today based on your budget, setting, group, and energy level.</p>
+    </section>
+
+    <section class="panel">
+      <form id="quest-form">
+        <div class="form-header">
+          <h2>Build Your Quest</h2>
+          <p>Choose your preferences and SideQuest will recommend activities that match.</p>
+        </div>
+
+        <label>
+          Budget
+          <input type="number" id="budget" min="0" placeholder="Example: 25" required />
+        </label>
+
+        <label>
+          Setting
+          <select id="setting" required>
+            <option value="">Select one</option>
+            <option value="indoor">Indoor</option>
+            <option value="outdoor">Outdoor</option>
+          </select>
+        </label>
+
+        <label>
+          Going With
+          <select id="groupType" required>
+            <option value="">Select one</option>
+            <option value="alone">Just me</option>
+            <option value="friends">Friends</option>
+          </select>
+        </label>
+
+        <label>
+          Energy Level
+          <select id="energyLevel" required>
+            <option value="">Select one</option>
+            <option value="low">Low energy</option>
+            <option value="medium">Medium energy</option>
+            <option value="high">High energy</option>
+          </select>
+        </label>
+
+        <div class="button-row">
+          <button type="submit" class="primary-btn">Find Quests</button>
+          <button type="button" id="reset-btn" class="secondary-btn">Reset</button>
+        </div>
+
+        <p id="form-message" class="form-message"></p>
+      </form>
+    </section>
+
+    <section id="results-section" class="results-section hidden">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Your Matches</p>
+          <h2 id="results-title">Recommended Activities</h2>
+        </div>
+        <button type="button" id="random-btn" class="secondary-btn">Pick One For Me</button>
+      </div>
+
+      <div id="random-pick" class="random-pick hidden"></div>
+      <div id="results-grid" class="results-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
